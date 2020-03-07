@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonThree: UIButton!
     
     
+    @IBOutlet weak var resetButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +50,21 @@ class ViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let navigationController =  segue.destination as! UINavigationController
+        
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+        
+        if segue.identifier == "EditSegue"{
+        creationController.initialQuestion =  frontLabel.text
+        creationController.initialAnswer = backLabel.text
+        }
+    }
+    
+    
     @IBAction func didTapReveal(_ sender: Any) {
         if frontLabel.isHidden == true{
             
@@ -75,18 +92,53 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateFlashcard(question: String, answer: String, extraAnswerOne: String, correct: String , extraAnswerTwo: String){
+    
+        frontLabel.text = question
+        backLabel.text = answer
+        
+        buttonOne.setTitle(extraAnswerOne, for: .normal)
+        buttonTwo.setTitle(correct, for: .normal)
+        buttonThree.setTitle(extraAnswerTwo, for: .normal)
+        
+    }
+    
+    
     @IBAction func didTapOne(_ sender: Any) {
         buttonOne.isHidden = true
     }
     
     @IBAction func didTapTwo(_ sender: Any) {
-        frontLabel.isHidden = true
-
+        didTapReveal(buttonTwo)
     }
     
     @IBAction func didTapThree(_ sender: Any) {
         buttonThree.isHidden = true
     }
+    
+    @IBAction func didTapReset(_ sender: Any) {
+        
+        frontLabel.isHidden = false
+       
+        if buttonOne.isHidden == true{
+            buttonOne.isHidden = false
+            
+            if buttonThree.isHidden == true
+            {
+                buttonThree.isHidden = false
+            }
+        }
+        else {
+            
+            if buttonThree.isHidden == true
+            {
+                buttonThree.isHidden = false
+            }
+            
+        }
+        
+    }
+    
     
 }
 

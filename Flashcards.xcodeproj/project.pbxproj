@@ -12,6 +12,7 @@
 		5C170CBB2400A4D8003D5280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C170CB92400A4D8003D5280 /* Main.storyboard */; };
 		5C170CBD2400A4DA003D5280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C170CBC2400A4DA003D5280 /* Assets.xcassets */; };
 		5C170CC02400A4DA003D5280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C170CBE2400A4DA003D5280 /* LaunchScreen.storyboard */; };
+		5C9FFDD6240287300049018A /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9FFDD5240287300049018A /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5C170CBC2400A4DA003D5280 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C170CBF2400A4DA003D5280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C170CC12400A4DA003D5280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C9FFDD5240287300049018A /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				5C170CB52400A4D8003D5280 /* AppDelegate.swift */,
 				5C170CB72400A4D8003D5280 /* ViewController.swift */,
 				5C170CB92400A4D8003D5280 /* Main.storyboard */,
+				5C9FFDD5240287300049018A /* CreationViewController.swift */,
 				5C170CBC2400A4DA003D5280 /* Assets.xcassets */,
 				5C170CBE2400A4DA003D5280 /* LaunchScreen.storyboard */,
 				5C170CC12400A4DA003D5280 /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				5C170CB82400A4D8003D5280 /* ViewController.swift in Sources */,
 				5C170CB62400A4D8003D5280 /* AppDelegate.swift in Sources */,
+				5C9FFDD6240287300049018A /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PQ46JW5Z2;
 				INFOPLIST_FILE = Flashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PQ46JW5Z2;
 				INFOPLIST_FILE = Flashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
