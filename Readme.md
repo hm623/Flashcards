@@ -1,6 +1,26 @@
 Flashcards
 
 
+## Lab 3
+
+### App Description
+In this new update of the Flashcard app, flashcards are now saved in an array. Users are now able to use next and previous button to pick a flashcard they want. 
+
+### App Walk-though
+User presses next until the end of the array then adds a 5th question and 5th answer (multiple choices which are optional are still a work in progress ). User then checks the first flashcard and the last flashcard if clicking label reveals the answer, which it does. User then exits out of the app and reopens it. User checks whether everything is saved and working, and they are.
+
+<img src="http://g.recordit.co/C7AhpGedVH.gif" width=200><br>
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [ ] User can delete a flashcard
+- [ ] User can edit existing flashcard
+- [ ] User can store multiple choice questions
+
+
 ## Lab 2
 
 ### App Description

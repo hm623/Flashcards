@@ -98,6 +98,22 @@
                                     <action selector="didTapThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIC-i9-wf2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYw-qx-Srt">
+                                <rect key="frame" x="282" y="732" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="tapNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrR-Iv-GJB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlB-22-4fR">
+                                <rect key="frame" x="61" y="732" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="tapPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pHc-8P-YU3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.76277608682718345" blue="0.50148810168283231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,6 +125,8 @@
                         <outlet property="buttonTwo" destination="deN-8k-P85" id="Z72-rI-vp3"/>
                         <outlet property="cardControl" destination="lSY-Yz-98y" id="gYM-M5-Tk9"/>
                         <outlet property="frontLabel" destination="v5L-F0-h0q" id="AxY-6t-Ofn"/>
+                        <outlet property="nextBtn" destination="FYw-qx-Srt" id="U06-tM-lvZ"/>
+                        <outlet property="prevBtn" destination="LlB-22-4fR" id="Hs3-ZA-qaN"/>
                         <outlet property="resetButton" destination="Ntc-3L-gHd" id="dff-Dx-97K"/>
                     </connections>
                 </viewController>

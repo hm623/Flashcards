@@ -86,6 +86,7 @@ class CreationViewController: UIViewController {
         } else {
             
             flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: extra1!, correct: correctChoice! ,extraAnswerTwo: extra2!)
+            
         
         dismiss(animated: true)
             
