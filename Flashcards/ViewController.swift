@@ -74,6 +74,7 @@ class ViewController: UIViewController {
         updateLabels()
         
         updateNextPrevBtns()
+        animateCardOutNext()
     }
     
 
@@ -83,6 +84,7 @@ class ViewController: UIViewController {
         updateLabels()
         
         updateNextPrevBtns()
+        animateCardOutPrev()
     }
     
     
@@ -133,13 +135,21 @@ class ViewController: UIViewController {
     
     
     @IBAction func didTapReveal(_ sender: Any) {
-        if frontLabel.isHidden == true{
-            
-            frontLabel.isHidden = false
-        }
-        else{
-            frontLabel.isHidden = true
-        }
+        flipFlashcard()
+        
+    }
+    
+    func flipFlashcard(){
+        
+        UIView.transition(with: cardControl, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if self.frontLabel.isHidden == true{
+                
+                self.frontLabel.isHidden = false
+            }
+            else{
+                self.frontLabel.isHidden = true
+            }
+        })
         
         if buttonOne.isHidden == true{
             buttonOne.isHidden = false
@@ -157,7 +167,47 @@ class ViewController: UIViewController {
             }
             
         }
+        
     }
+    
+    func animateCardOutNext(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cardControl.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)}, completion: {finished in
+                self.updateLabels()
+                self.animateCardInNext()})
+    }
+    
+    func animateCardInNext(){
+        
+        self.cardControl.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cardControl.transform = CGAffineTransform.identity})
+        
+    }
+    
+    
+    
+    
+    func animateCardOutPrev(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cardControl.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)}, completion: {finished in
+                self.updateLabels()
+                self.animateCardInPrev()})
+    }
+    
+    func animateCardInPrev(){
+        
+        self.cardControl.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.cardControl.transform = CGAffineTransform.identity})
+        
+    }
+    
+    
+    
+    
     
     func updateFlashcard(question: String, answer: String, extraAnswerOne: String, correct: String , extraAnswerTwo: String){
         
